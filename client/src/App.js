@@ -4,7 +4,7 @@ import './App.css';
 import Navbar from './components/Navbar';
 import Signup from './components/Signup';
 import LoginForm from './components/LoginForm';
-// import Signup from './pages/Signup';
+import Search from './pages/Searchpage';
 // import StickyFooter from './components/StickyFooter';
 
 function App() {
@@ -13,6 +13,7 @@ function App() {
       <Navbar />
       <Signup />
       <LoginForm />
+      <Search />
     </div>
   );
 }
