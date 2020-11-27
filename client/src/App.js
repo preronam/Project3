@@ -5,7 +5,7 @@ import Navbar from './components/Navbar';
 import Signup from './components/Signup';
 import LoginForm from './components/LoginForm';
 import Search from './pages/Searchpage';
-// import StickyFooter from './components/StickyFooter';
+import StickyFooter from './components/StickyFooter';
 
 function App() {
   return (
@@ -14,6 +14,8 @@ function App() {
       <Signup />
       <LoginForm />
       <Search />
+      <StickyFooter />
+
     </div>
   );
 }
