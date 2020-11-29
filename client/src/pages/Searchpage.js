@@ -61,7 +61,7 @@ function startScanner() {
         var myBarcode = result.codeResult.code;
         alert(myBarcode)
         const proxyurl = "https://cors-anywhere.herokuapp.com/"; // Use a proxy to avoid CORS error
-        const api_key = "o93e211ba6nznnu5peniucnd1h7y7v";
+        const api_key = "hrsh89sx6t7478jna9yf81jqmxbhke";
         const barcodeurl = "https://api.barcodelookup.com/v2/products?barcode=";
         //const queryURL = proxyurl + barcodeurl + myBarcode + "&formatted=y&key=" + api_key;
         $.ajax({ url: (proxyurl + barcodeurl + myBarcode + "&formatted=y&key=" + api_key), method: "GET" }).then(function (response) {
@@ -83,7 +83,7 @@ function myRes() {
     }
 }
 
-export class Homepage extends Component {
+export class SearchPage extends Component {
     render() {
         return (
             <div>
@@ -95,4 +95,4 @@ export class Homepage extends Component {
     }
 }
 
-export default Homepage
+export default SearchPage
