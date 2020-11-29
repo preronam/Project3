@@ -1,22 +1,24 @@
-
-import './App.css';
-//import Login from './pages/Login';
-import Navbar from './components/Navbar';
-import Signup from './components/Signup';
-import LoginForm from './components/LoginForm';
-import Search from './pages/Searchpage';
-import StickyFooter from './components/StickyFooter';
+import React from "react";
+import Home from "./pages/Home";
+import Login from "./pages/Login";
+import Signup from "./pages/Signup";
+import Navbar from "./components/Navbar";
+import SearchPage from "./pages/Searchpage"
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 function App() {
   return (
-    <div className="App">
+    <Router>
+      <div className="App">
       <Navbar />
-      <Signup />
-      <LoginForm />
-      <Search />
-      <StickyFooter />
-
-    </div>
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route exact path="/login" component={Login} />
+          <Route exact path="/signup" component={Signup} />
+          <Route exact path="/search" component={SearchPage} />
+        </Switch>
+      </div>
+    </Router>
   );
 }
 
