@@ -51,7 +51,7 @@ class SignupForm extends React.Component {
   
       return (
         <div>
-          <Grid container spacing={0} justify="center" direction="row">
+          <Grid container spacing={0} justify="center" direction="colomn">
             <Grid item>
               <Grid
                 container

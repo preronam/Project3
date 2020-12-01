@@ -3,11 +3,12 @@ import {makeStyles} from "@material-ui/core/styles"
 
 
 
+
 export default makeStyles({
 
   aboutSection: {
     position: "relative",
-    backgroundColor: "#FEEEC2",
+    backgroundColor: "#F7E3B6",
     backgroundSize: "cover",
     backgroundRepeat: "no-repeat",
     backgroundPosition: "center",
@@ -18,5 +19,10 @@ export default makeStyles({
     alignContent: "flex-start",
   },
 
+  stylesection: {
+    // backgroundColor: "#CDC2D6",
+    backgroundColor: "white",
 
+    height: 15,
+  },
 });
