@@ -13,7 +13,7 @@ function startScanner() {
             target: document.querySelector('#scanner-container'),
             constraints: {
                 width: 480,
-                height: 320,
+                height: 100,
                 facingMode: "environment"
             },
         },
@@ -83,13 +83,34 @@ function myRes() {
     }
 }
 
+function myBarCode(){
+    var barcodeInput = $('#searchbtn').val().trim();
+    const proxyurl = "https://cors-anywhere.herokuapp.com/"; // Use a proxy to avoid CORS error
+    const api_key = "hrsh89sx6t7478jna9yf81jqmxbhke";
+    const barcodeurl = "https://api.barcodelookup.com/v2/products?barcode=";
+    //const queryURL = proxyurl + barcodeurl + myBarcode + "&formatted=y&key=" + api_key;
+    $.ajax({ url: (proxyurl + barcodeurl + barcodeInput + "&formatted=y&key=" + api_key), method: "GET" }).then(function (response) {
+        console.log(response);
+        console.log('---------------------')
+        var tit = response.products[0].manufacturer
+        console.log(tit)
+        var productName = response.products[0].product_name
+        var myImage = response.products[0].images
+        // title + product_name +
+    })
+}
+
+
 export class SearchPage extends Component {
     render() {
         return (
             <div>
                 <input type="button" onClick={myRes} id="btn" value="Start/Stop the scanner" />
+                <input type="number" id="searchbtn"/><button onClick={myBarCode}>Enter Barcode</button>
                 <div id="scanner-container"></div>
+            
                 <div id="results"></div>
+
             </div>
         )
     }
