@@ -5,15 +5,8 @@ import Paper from "@material-ui/core/Paper";
 import Typography from "@material-ui/core/Typography";
 import Grid from "@material-ui/core/Grid";
 import Link from "@material-ui/core/Link";
-
 import Container from '@material-ui/core/Container';
-
-const useStyles = makeStyles((theme) => ({
-    root: {
-      flexGrow: 1,
-    },
-
-  }));
+import useStyles from "./styles"
 
 
 
@@ -23,8 +16,11 @@ export default function Hero (){
 
   return (
     <div className={classes.root}>
-
-
+      <Grid container className={classes.root} spacing={0}>
+        <Grid item xs={12}>
+          <Paper elevation={0} className={classes.HeroImage}></Paper>
+        </Grid>
+      </Grid>
     </div>
   );
 }

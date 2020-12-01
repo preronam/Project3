@@ -11,27 +11,11 @@ import Button from "@material-ui/core/Button";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
 import { withRouter } from "react-router-dom";
 import Link from "@material-ui/core/Link";
+import useStyles from "./styles"
 
-const useStyles = makeStyles((theme) => ({
-  root: {
-    flexGrow: 1,
-  },
-  menuButton: {
-    marginRight: theme.spacing(2),
-  },
-  title: {
-    [theme.breakpoints.down("xs")]: {
-      flexGrow: 1,
-    },
-  },
-  headerOptions: {
-    display: "flex",
-    flex: 1,
-    justifyContent: "flex-end",
-  },
-}));
 
-const Header = (props) => {
+
+const Navbar = (props) => {
   const { history } = props;
   const classes = useStyles();
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -70,10 +54,9 @@ const Header = (props) => {
       pageURL: "/search",
     },
   
-  
-  
   ];
 
+  
   return (
     <div className={classes.root}>
       <AppBar position="static">
@@ -134,4 +117,4 @@ const Header = (props) => {
   );
 };
 
-export default withRouter(Header);
+export default withRouter(Navbar);
