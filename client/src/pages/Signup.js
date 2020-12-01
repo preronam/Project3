@@ -1,25 +1,12 @@
 import React from "react";
-basic-styling
-
-=======
- main
-import Signupmock from "../components/Signupmock"
-
+import Signupmock from "../components/Signupmock";
 
 function Login() {
   return (
-
-
-<div>
-
-<Signupmock/>
-
-</div>
-
- 
- 
- 
- );
+    <div>
+      <Signupmock />
+    </div>
+  );
 }
 
 export default Login;
