@@ -1,5 +1,5 @@
 import React from "react";
-import SignupForm from "../components/SignupForm"
+
 import Signupmock from "../components/Signupmock"
 
 
@@ -8,7 +8,7 @@ function Login() {
 
 
 <div>
-<SignupForm/>
+
 <Signupmock/>
 
 </div>
