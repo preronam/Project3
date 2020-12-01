@@ -1,12 +1,13 @@
 import {makeStyles} from "@material-ui/core/styles"
-import HeroIMG  from "../../assets/heroimg.jpg"
+
 
 
 
 export default makeStyles({
-  HeroImage: {
+
+  aboutSection: {
     position: "relative",
-    backgroundImage: `url(${HeroIMG})`,
+    backgroundColor: "#FEEEC2",
     backgroundSize: "cover",
     backgroundRepeat: "no-repeat",
     backgroundPosition: "center",
@@ -16,4 +17,6 @@ export default makeStyles({
     flexWrap: "wrap",
     alignContent: "flex-start",
   },
+
+
 });

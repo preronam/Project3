@@ -1,12 +1,12 @@
 import {makeStyles} from "@material-ui/core/styles"
-import HeroIMG  from "../../assets/heroimg.jpg"
+
 
 
 
 export default makeStyles({
-  HeroImage: {
+  profileSection: {
     position: "relative",
-    backgroundImage: `url(${HeroIMG})`,
+    backgroundColor: "secondary",
     backgroundSize: "cover",
     backgroundRepeat: "no-repeat",
     backgroundPosition: "center",

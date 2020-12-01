@@ -11,14 +11,16 @@ import useStyles from "./styles"
 
 
 
-export default function Hero (){
+export default function Hero() {
   const classes = useStyles();
 
   return (
     <div className={classes.root}>
       <Grid container className={classes.root} spacing={0}>
         <Grid item xs={12}>
-          <Paper elevation={0} className={classes.HeroImage}></Paper>
+          <Paper elevation={0} className={classes.profileSection}>
+            <Typography>How it works</Typography>
+          </Paper>
         </Grid>
       </Grid>
     </div>
