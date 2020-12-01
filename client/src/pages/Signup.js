@@ -1,10 +1,10 @@
 import React from "react";
-import Signupmock from "../components/Signupmock";
+import SignupForm from "../components/SignupForm/SignupForm";
 
 function Login() {
   return (
     <div>
-      <Signupmock />
+      <SignupForm />
     </div>
   );
 }

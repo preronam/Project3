@@ -1,11 +1,11 @@
 import React from "react";
 
-import Loginmock from "../components/Loginmock.js";
+import LoginForm from "../components/LoginForm/LoginForm";
 
 function Login() {
   return (
     <div>
-      <Loginmock />
+      <LoginForm />
     </div>
   );
 }
