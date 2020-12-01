@@ -1,4 +1,8 @@
 import React from "react";
+<<<<<<< HEAD
+=======
+
+>>>>>>> basic-styling
 import Signupmock from "../components/Signupmock"
 
 

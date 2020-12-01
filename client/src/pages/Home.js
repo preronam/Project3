@@ -1,15 +1,18 @@
 import React from "react";
-import Hero from "../components/Hero.js"
-
+import Hero from "../components/Hero/Hero"
+import AboutSection from "../components/AboutSection/AboutSection"
+import InfoSection from "../components/InfoSection/InfoSection"
 
 function Home() {
   return (
-    <div>
-<h1>Home Page</h1>
-      <Hero/>
+  
+<div>
+<Hero/>
+<AboutSection/>
+<InfoSection/>
+</div>
 
-    
-  </div>
+  
   );
 }
 
