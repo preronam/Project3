@@ -13,7 +13,7 @@ export default function AboutSection() {
     <Grid container className={classes.root} spacing={0}>
       <Grid item xs={12}>
         <Paper elevation={0} className={classes.aboutSection}>
-          <Typography>Love the skin you're in</Typography>
+          <Typography>Love the skin you're in section</Typography>
         </Paper>
       </Grid>
     </Grid>
