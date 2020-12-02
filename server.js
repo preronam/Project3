@@ -6,7 +6,7 @@ const dbConnection = require('./server/database');
 const MongoStore = require('connect-mongo')(session)
 const passport = require('./server/passport');
 const Quagga = require('quagga').default; // Common JS (important: default)
-
+const dotenv = require('dotenv').config();
 
 const path = require("path");
 const PORT = process.env.PORT || 3001;

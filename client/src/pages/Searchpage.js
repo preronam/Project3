@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-//import API from '../utils/API'
+// import API from '../utils/API'
+import ResultCard from "./ResultCard"
 import $ from "jquery";
 import Quagga from "quagga";
 import Button from "@material-ui/core/Button";
@@ -66,9 +67,9 @@ function startScanner() {
     var myBarcode = result.codeResult.code;
     alert(myBarcode);
     const proxyurl = "https://cors-anywhere.herokuapp.com/"; // Use a proxy to avoid CORS error
-    const api_key = "hrsh89sx6t7478jna9yf81jqmxbhke";
+    const api_key = process.env.REACT_APP_GOOGLE_API_KEY;
+    console.log(api_key)
     const barcodeurl = "https://api.barcodelookup.com/v2/products?barcode=";
-    //const queryURL = proxyurl + barcodeurl + myBarcode + "&formatted=y&key=" + api_key;
     $.ajax({
       url: proxyurl + barcodeurl + myBarcode + "&formatted=y&key=" + api_key,
       method: "GET",
@@ -94,20 +95,18 @@ function myRes() {
 function myBarCode() {
   var barcodeInput = $("#searchbtn").val().trim();
   const proxyurl = "https://cors-anywhere.herokuapp.com/"; // Use a proxy to avoid CORS error
-  const api_key = "hrsh89sx6t7478jna9yf81jqmxbhke";
+  const api_key = process.env.REACT_APP_GOOGLE_API_KEY;
   const barcodeurl = "https://api.barcodelookup.com/v2/products?barcode=";
-  //const queryURL = proxyurl + barcodeurl + myBarcode + "&formatted=y&key=" + api_key;
   $.ajax({
     url: proxyurl + barcodeurl + barcodeInput + "&formatted=y&key=" + api_key,
     method: "GET",
   }).then(function (response) {
-    console.log(response);
+    console.log(response);   //019100109995
     console.log("---------------------");
-    var tit = response.products[0].manufacturer;
-    console.log(tit);
+    var manufacturer = response.products[0].manufacturer;
     var productName = response.products[0].product_name;
-    var myImage = response.products[0].images;
-    // title + product_name +
+    var myImage = response.products[0].images[0];
+    //var totalResults = [productName, myImage, manufacturer]
   });
 }
 
@@ -139,13 +138,6 @@ export class SearchPage extends Component {
               Start/Stop Scanner
             </Button>
           </Grid>
-
-          {/* <input
-          type="button"
-          onClick={myRes}
-          id="btn"
-          value="Start/Stop the scanner"
-        /> */}
           <Grid item xs={6} sm={3} lg={6}>
             <TextField
               type="number"
@@ -155,13 +147,7 @@ export class SearchPage extends Component {
               variant="outlined"
               autoFocus
             />
-            
-            {/* <input type="number" id="searchbtn" /> */}
           </Grid>
-
-          
-        {/* <button onClick={myBarCode}>Enter Barcode</button> */}
-
           <Grid item xs={6}>
             <Button
               size="md"
@@ -174,10 +160,14 @@ export class SearchPage extends Component {
               Enter Barcode
             </Button>
           </Grid>
+          <ResultCard
+            component={ResultCard}
+          />
         </Grid>
         <div id="scanner-container"></div>
 
         <div id="results"></div>
+
       </div>
     );
   }
