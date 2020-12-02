@@ -3,6 +3,8 @@ import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import Navbar from "./components/Navbar/Navbar";
+import ProductResult from "./pages/ProductResult"
+import Profile from "./pages/Profile"
 import SearchPage from "./pages/Searchpage"
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import {ThemeProvider} from "@material-ui/core"
@@ -20,6 +22,8 @@ function App() {
             <Route exact path="/login" component={Login} />
             <Route exact path="/signup" component={Signup} />
             <Route exact path="/search" component={SearchPage} />
+            <Route exact path="/product" component={ProductResult} />
+            <Route exact path="/profile" component={Profile} />
           </Switch>
         </ThemeProvider>
       </div>
