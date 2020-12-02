@@ -155,12 +155,12 @@ export class SearchPage extends Component {
               variant="outlined"
               autoFocus
             />
-            {/* 
-            <input type="number" id="searchbtn" /> */}
+            
+            {/* <input type="number" id="searchbtn" /> */}
           </Grid>
 
-          {/* 
-        <button onClick={myBarCode}>Enter Barcode</button> */}
+          
+        {/* <button onClick={myBarCode}>Enter Barcode</button> */}
 
           <Grid item xs={6}>
             <Button
