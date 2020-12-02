@@ -1,16 +1,10 @@
 import React from "react";
-
-import {
-  Button,
-  TextField,
-  Grid,
-  Paper,
-  Typography,
-  Link,
-} from "@material-ui/core";
 import axios from "axios";
+import { Button, TextField, Grid, Paper, Typography, Link } from "@material-ui/core";
+import "./styles.css"
 
-class Signupmock extends React.Component {
+
+class SignupForm extends React.Component {
   constructor() {
     super();
     this.state = { username: "", password: "", confirmPassword: "", authflag: 1 };
@@ -51,11 +45,13 @@ class Signupmock extends React.Component {
 
         })
 }
+
+
   render() {
   
       return (
         <div>
-          <Grid container spacing={0} justify="center" direction="row">
+          <Grid container spacing={0} justify="center" direction="colomn">
             <Grid item>
               <Grid
                 container
@@ -130,4 +126,4 @@ class Signupmock extends React.Component {
     
   }
 }
-export default Signupmock;
+export default SignupForm;

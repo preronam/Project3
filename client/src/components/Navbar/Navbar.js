@@ -59,7 +59,7 @@ const Navbar = (props) => {
   
   return (
     <div className={classes.root}>
-      <AppBar position="static">
+      <AppBar color="white" position="static">
         <Toolbar>
           <Typography variant="h6" className={classes.title}>
             <Link href="/" color="inherit">

@@ -6,7 +6,7 @@ import {makeStyles} from "@material-ui/core/styles"
 export default makeStyles({
   profileSection: {
     position: "relative",
-    backgroundColor: "secondary",
+    backgroundColor: "#A1B78F",
     backgroundSize: "cover",
     backgroundRepeat: "no-repeat",
     backgroundPosition: "center",
