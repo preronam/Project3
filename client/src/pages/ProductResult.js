@@ -1,15 +1,15 @@
 import React from "react";
 import Typography from "@material-ui/core/Typography"
 
-function Profile() {
+function ProductResult() {
   return (
   
 <div>
-<Typography>Profile page!</Typography>
+<Typography>Product Result page!</Typography>
 </div>
 
   
   );
 }
 
-export default Profile;
+export default ProductResult;
