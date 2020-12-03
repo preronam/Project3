@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 // import API from '../utils/API'
-import ResultCard from "./ResultCard"
+// import ResultCard from "../components/ResultCard/ResultCard"
 import $ from "jquery";
 import Quagga from "quagga";
 import Button from "@material-ui/core/Button";
@@ -160,9 +160,9 @@ export class SearchPage extends Component {
               Enter Barcode
             </Button>
           </Grid>
-          <ResultCard
+          {/* <ResultCard
             component={ResultCard}
-          />
+          /> */}
         </Grid>
         <div id="scanner-container"></div>
 
