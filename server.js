@@ -9,13 +9,13 @@ const Quagga = require('quagga').default; // Common JS (important: default)
 const dotenv = require('dotenv').config();
 
 const path = require("path");
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 3000;
 const app = express();
 
 //Route Requires//
-const user = require('./server/routes/user')
+const user = require('./server/routes/user');
 
-mongodb+srv://pm:code@dermpal.bbxla.mongodb.net/<dbname>?retryWrites=true&w=majority
+// mongodb+srv://pm:code@dermpal.bbxla.mongodb.net/<dbname>?retryWrites=true&w=majority
 
 // Define middleware here
 app.use(morgan('dev'))
@@ -36,6 +36,10 @@ app.use(
 		saveUninitialized: false //required
 	})
 )
+
+mongoose.connect('mongodb://localhost/dermpal')
+    .then(() => console.log("Database Connected Successfully"))
+    .catch(err => console.log(err));
 
 // Passport 
 app.use(passport.initialize())

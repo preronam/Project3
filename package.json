@@ -1,6 +1,11 @@
 {
   "name": "Project3",
   "version": "1.0.0",
+  "proxy": "http://localhost:3001/",
+  "engines": {
+    "node": "14.15.1"
+},
+
   "description": "",
   "main": "npm start",
   "scripts": {

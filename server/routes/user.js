@@ -3,7 +3,7 @@ const router = express.Router()
 const User = require('../database/models/user')
 const passport = require('../passport')
 
-router.post('/', (req, res) => {
+router.post('/user/signup', (req, res) => {
     console.log('user signup');
 
     const { username, password } = req.body
@@ -30,7 +30,7 @@ router.post('/', (req, res) => {
 })
 
 router.post(
-    '/login',
+    '/user/login',
     function (req, res, next) {
         console.log('routes/user.js, login, req.body: ');
         console.log(req.body)
