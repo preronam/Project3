@@ -15,6 +15,8 @@ const app = express();
 //Route Requires//
 const user = require('./server/routes/user')
 
+mongodb+srv://pm:code@dermpal.bbxla.mongodb.net/<dbname>?retryWrites=true&w=majority
+
 // Define middleware here
 app.use(morgan('dev'))
 app.use(
