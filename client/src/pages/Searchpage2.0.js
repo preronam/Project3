@@ -100,9 +100,7 @@ import TextField from "@material-ui/core/TextField";
 
 
 
-
-
-function SearchPage() {
+function SearchPageRefactor() {
   const [products, setProduct] = useState([]);
   const [productSearch, setProductSearch] = useState("");
 
@@ -143,14 +141,12 @@ function SearchPage() {
             color="primary"
             type="button"
             className="button-block"
-           
           >
             Start/Stop Scanner
           </Button>
         </Grid>
         <Grid item xs={6} sm={3} lg={6}>
           <TextField
-            type="number"
             placeholder="barcode #"
             fullWidth
             name="ProductSearch"
@@ -191,4 +187,6 @@ function SearchPage() {
   );
 }
 
-export default SearchPage;
+export default SearchPageRefactor;
+
+

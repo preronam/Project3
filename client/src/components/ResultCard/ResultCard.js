@@ -26,11 +26,11 @@ export default function ResultCard(props) {
   return (
     <Card className={classes.root}>
       <CardHeader
-        avatar={
-          <Avatar aria-label="recipe" className={classes.avatar}>
-            R
-          </Avatar>
-        }
+        // avatar={
+        //   <Avatar aria-label="recipe" className={classes.avatar}>
+        //     R
+        //   </Avatar>
+        // }
         title={props.title}
         subheader={props.subheader}
       />
