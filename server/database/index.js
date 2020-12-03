@@ -4,7 +4,11 @@ mongoose.Promise = global.Promise
 
 //your local database url
 //3001 is the default mongoDB port
-const uri = 'mongodb://localhost:3001/dermpal' 
+const uri = process.env.MONGODB_URI || 'mongodb://localhost/dermpal' 
+{
+  useCreateIndex: true
+  useNewUrlParser: true
+}
 
 mongoose.connect(uri).then(
     () => { 
