@@ -7,9 +7,11 @@ const MongoStore = require('connect-mongo')(session)
 const passport = require('./server/passport');
 const Quagga = require('quagga').default; // Common JS (important: default)
 const dotenv = require('dotenv').config();
+const mongoose = require('mongoose');
+
 
 const path = require("path");
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3001;
 const app = express();
 
 //Route Requires//
