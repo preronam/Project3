@@ -4,10 +4,9 @@
   "proxy": "http://localhost:3001/",
   "engines": {
     "node": "14.15.1"
-},
-
+  },
   "description": "",
-  "main": "npm start",
+  "main": "server.js",
   "scripts": {
     "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
     "start:prod": "node server.js",
@@ -37,14 +36,16 @@
     "@material-ui/core": "^4.11.0",
     "@material-ui/icons": "^4.9.1",
     "@material-ui/styles": "^4.10.0",
+    "bcryptjs": "^2.4.3",
     "connect-mongo": "^3.2.0",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "express-session": "^1.17.1",
     "jquery": "^3.5.1",
-    "mongoose": "^5.10.15",
+    "mongoose": "^5.11.4",
     "morgan": "^1.10.0",
     "passport": "^0.4.1",
+    "passport-local": "^1.0.0",
     "quagga": "^0.12.1"
   }
 }
