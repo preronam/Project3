@@ -108,7 +108,8 @@ const Navbar = (props) => {
                 Sign up
               </Button>
               <Button color="inherit" onClick={() => handleButtonClick("/login")}>Login</Button>
-              <Button color="inherit" onClick={() => handleButtonClick("/search")}>Search</Button>
+              <Button color="inherit" onClick={() => handleButtonClick("/searchbyinput")}>SearchInput</Button>
+              <Button color="inherit" onClick={() => handleButtonClick("/searchbyscanner")}>SearchScanner</Button>
             </div>
           )}
         </Toolbar>
